@@ -1,0 +1,50 @@
+.register-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 800px;
+    background: linear-gradient(45deg, #5a6b7e, #141a1b);
+  }
+  
+  .register-sec {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    animation: rotateCard 4s infinite alternate;
+  }
+  
+  .register-form {
+    padding: 20px;
+  }
+  
+  .btn-login {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-login:hover {
+    background-color: #0062cc;
+  }
+  
+  @keyframes rotateCard {
+    0% {
+      transform: rotateX(0) rotateY(0);
+    }
+    50% {
+      transform: rotateX(-1deg) rotateY(-1deg);
+    }
+    100% {
+      transform: rotateX(0) rotateY(0);
+    }
+  }
+  

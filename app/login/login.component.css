@@ -1,0 +1,130 @@
+.login-block {
+  float: left;
+  width: 100%;
+  padding-top: 20px;
+  padding-top: auto;
+  background: linear-gradient(45deg, #b8d7f8, #acdac3);
+  padding-bottom: 160px;
+}
+
+.container {
+  background: #f0f4f8;
+  border-radius: 20px;
+  width: 60%;
+  max-width: 400px;
+  padding: 20px;
+  position: relative;
+  margin: 0 auto;
+  animation: slide-in 1s ease-out;
+  box-shadow: 8px 8px 16px #949393, -8px -8px 16px #d2f1f9;
+}
+
+
+
+@keyframes slide-in {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.login-sec {
+  padding: 50px 30px;
+  position: relative;
+}
+
+.login-sec h2 {
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 30px;
+  color: #2736a9;
+  animation: fade-in 1s ease-out;
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.login-sec h2:after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #2736a9, #81caef);
+  display: block;
+  margin: 20px auto;
+  border-radius: 2px;
+  animation: slide-in 1s ease-out;
+}
+
+.btn-login {
+  background: #81caef;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease-out;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background: #6bafda;
+}
+
+.form-group {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  background: #f0f4f8;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  box-shadow: inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #ffffff;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  outline: none;
+  box-shadow: inset 4px 4px 8px #ffffff, inset -4px -4px 8px #ffffff;
+}
+
+.login-form .text-danger {
+  color: #ff5959;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-form .text-center {
+  margin-top: 20px;
+}
+
+.login-form .spinner-border {
+  color: #2736a9;
+}
+
+.login-form .text-primary {
+  color: #2736a9;
+}
+
+.login-form .clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.login-form .float-right {
+  float: right;
+}

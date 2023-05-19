@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<section class="image-block">
+  <h2 class="text-center white-text" style="font-weight:bolder; font-size: 45px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> <br>Welcome to the Dashboard!! </h2>
+
+  <section class ="dashboard-block">
+    <div class="container">
+      <div class="row ">
+        <div class="col login-sec">
+          <form class="form" style="align-content: center;" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+            <div class="form-group">
+              <h4>
+                Your CSV file should include at least the following features/columns:
+              </h4>
+              <ul>
+                <li>InvoiceDate (eg: 12/1/2010 8:26)</li>
+                <li>Quantity (eg: 6)</li>
+                <li>UnitPrice(eg: 2.55)</li>
+              </ul>
+              <label style="font-weight: 700; font-size: larger; padding-top: 5px; padding-left: 10px; " for="csvFile"> Upload Your CSV File here:</label>
+              <input type="file" accept=".csv" class="form-control-file" id="csvFile"   (change)="onFileSelected($event)" #csvFileInput>
+            </div><br>
+            <table>
+              <tr><td>
+            <label style="font-weight: 700; font-size: larger; padding-left: 10px; padding-top: 15px; " for="periodicity">Seasonality:</label></td>
+            <td>
+            <select name="Seasonality" style="margin-left: 10px; border: none; background-color: #f2f2f2; padding: 10px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);" id="Seasonality" (change)="onPeriodicityChange($event)">
+                <option style="border-color: black;">select</option>
+                <option value="d">Days</option>
+                <option value="w">Weeks</option>
+                <option value="m">Months</option>
+                <option value="y">Years</option>
+            </select><br><br>
+          </td>
+            </tr>
+            <tr>
+              <td>
+            <label style="font-weight: 700; font-size: larger; padding-left: 10px; padding-top: 10px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;" for="periods">Range:</label></td>
+            <td><input type="number" style="width: 60px; text-align: center; margin-left: 10px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);" name="Range" id="periods" (change)="onPeriodsChange($event)"><br><br>
+            </td>
+          </tr>
+          </table>
+            <input type="submit" value="Predict" style="font-weight: 700; margin-left: 3%; margin-top: 1%; font-size: larger;">
+            <div *ngIf="showTimer" style="margin-top: 10px; font-weight: 700; font-size: larger; background-color: #f2f2f2; padding: 10px; border-radius: 5px;">
+              {{ timer }} seconds
+          </div>
+          
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+</section>
+

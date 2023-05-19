@@ -1,0 +1,22 @@
+
+<app-navbar></app-navbar>
+
+
+<div class="main" style="background-color: rgb(213, 191, 191);">
+    <div class="run">
+      <div class="chart-container">
+        <canvas *ngIf="isLineChartVisible" class="chart" id="lineChart" style="background-color: rgb(255, 255, 255); opacity: 100%;" baseChart class="chart" type="line" [data]="chatdata"></canvas>
+        <canvas *ngIf="!isLineChartVisible" class="chart" id="barChart" style="background-color: rgb(255, 255, 255); opacity: 100%; block-size: 30px;" baseChart class="chart" type="bar" [data]="chatdata"></canvas>
+      </div>
+      <div class="sidebar">
+        <button class="chart-toggle-button" (click)="toggleChart()">Toggle Chart</button>
+        <br><br>
+        <div class="s">
+          <h2>Accuracy:</h2>
+          <pre>{{R2}}</pre>
+        </div>
+      </div>
+    </div>
+</div>
+  
+  
